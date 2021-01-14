@@ -8,3 +8,4 @@ env/
 venv/
 .vscode
 database.csv
+contacts.db
