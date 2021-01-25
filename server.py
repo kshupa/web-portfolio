@@ -41,4 +41,4 @@ def submit_form():
 
 
 if __name__ == "__main__":
-    server.run(port=5000)
+    app.run(threaded=True, port=5000)
