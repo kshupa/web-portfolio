@@ -7,5 +7,7 @@ __pycache__/
 env/
 venv/
 .vscode
+# 
 database.csv
 contacts.db
+.DS_Store
