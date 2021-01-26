@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect
-from datetime import datetime
 from flask_mail import Message, Mail
 from config import mail_username, mail_password
-import csv
 
 app = Flask(__name__)
 
@@ -15,7 +13,6 @@ app.config.update(
 )
 
 mail = Mail(app)
-
 
 
 @app.route('/')
