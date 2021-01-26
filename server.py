@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from datetime import datetime
-from flaskext.mail import Message, Mail
+from flask_mail import Message, Mail
 from config import mail_username, mail_password
 import csv
 
