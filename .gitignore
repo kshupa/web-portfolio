@@ -11,3 +11,4 @@ venv/
 database.csv
 contacts.db
 .DS_Store
+config.py
