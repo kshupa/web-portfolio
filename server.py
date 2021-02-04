@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_mail import Message, Mail
-from config import mail_username, mail_password
+# from config import mail_username, mail_password
+import os
 
 app = Flask(__name__)
 
@@ -8,8 +9,8 @@ app.config.update(
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
-    MAIL_USERNAME = mail_username,
-    MAIL_PASSWORD = mail_password,
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME'),
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD'),
 )
 
 mail = Mail(app)
