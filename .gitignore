@@ -1,14 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-
-# Environments
 .env
 .venv
 env/
 venv/
 .vscode
-# 
-database.csv
-contacts.db
 .DS_Store
 config.py
