@@ -9,8 +9,8 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
-    MAIL_USERNAME=os.environ.get['MAIL_USERNAME'],
-    MAIL_PASSWORD=os.environ.get['MAIL_PASSWORD'],
+    MAIL_USERNAME=os.environ['MAIL_USERNAME'],
+    MAIL_PASSWORD=os.environ['MAIL_PASSWORD'],
 )
 
 mail = Mail(app)
@@ -37,7 +37,7 @@ def submit_form():
             msg = Message(
                 subject=f"Mail from {name}",
                 body=f"Name: {name}\nEmail: {email}\n\n{message}",
-                sender=os.environ.get['MAIL_USERNAME'],
+                sender=os.environ['MAIL_USERNAME'],
                 recipients=['k.shupa@girlincode.com'],
             )
             mail.send(msg)
