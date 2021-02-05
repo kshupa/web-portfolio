@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 from flask_mail import Message, Mail
-# from config import mail_username, mail_password
 import os
 
 app = Flask(__name__)
